@@ -1,0 +1,58 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.0.1/dist/cookieconsent.css">
+<script defer src="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.0.1/dist/cookieconsent.umd.js"></script>
+<script defer>
+  window.addEventListener('load', function () {
+    CookieConsent.run({
+      guiOptions: {
+        consentModal: {
+          layout: "box",
+          position: "bottom right"
+        }
+      },
+      categories: {
+        necessary: {
+          enabled: true,
+          readOnly: true
+        },
+        analytics: {
+          enabled: false,
+          autoClear: {
+            cookies: [{ name: /^_ga/ }]
+          }
+        }
+      },
+      language: {
+        default: "en",
+        translations: {
+          en: {
+            consentModal: {
+              title: "This site uses cookies",
+              description: "I use Google Analytics to understand how visitors interact with this site. You can choose to accept or decline analytics cookies.",
+              acceptAllBtn: "Accept all",
+              acceptNecessaryBtn: "Reject all",
+              showPreferencesBtn: "Manage preferences"
+            },
+            preferencesModal: {
+              title: "Cookie preferences",
+              acceptAllBtn: "Accept all",
+              acceptNecessaryBtn: "Reject all",
+              savePreferencesBtn: "Save preferences",
+              sections: [
+                {
+                  title: "Necessary cookies",
+                  description: "Essential for the website to function properly.",
+                  linkedCategory: "necessary"
+                },
+                {
+                  title: "Analytics cookies",
+                  description: "Google Analytics helps me understand how visitors use this site. No personal data is shared with third parties.",
+                  linkedCategory: "analytics"
+                }
+              ]
+            }
+          }
+        }
+      }
+    });
+  });
+</script>
