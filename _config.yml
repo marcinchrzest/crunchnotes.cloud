@@ -19,7 +19,7 @@ title: CrunchNotes # the main title
 tagline: Field notes from the cloud trenches
 
 description: >- # used by seo meta and the atom feed
-  Field notes from the cloud trenches. Azure, M365, PowerShell and IT platform engineering by Marcin aka Crunch.
+  Field notes from the cloud trenches. Azure, M365, PowerShell and IT platform engineering by Mr. Crunch.
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
@@ -34,7 +34,7 @@ github:
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
-  name: Marcin aka Crunch
+  name: Mr. Crunch
   email: contact@crunchnotes.cloud # change to your email address
   links:
     # The first element serves as the copyright owner's link
