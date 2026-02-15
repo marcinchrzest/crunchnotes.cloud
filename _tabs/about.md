@@ -4,9 +4,9 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-## Marcin a.k.a Crunch
+## Crunch, a.k.a. Marcin
 
-Platform Engineer with nearly 20 years of IT experience. Day to day I work with Azure, M365 and PowerShell – designing, deploying and maintaining cloud infrastructure.
+IT Consultant with nearly 20 years of experience across infrastructure, cloud and security. Day to day I work with Azure, M365 and PowerShell – designing, deploying and maintaining cloud environments for various clients and projects.
 
 The nickname "Crunch" comes from my surname – Chrzęst is Polish for Crunch. It stuck.
 
