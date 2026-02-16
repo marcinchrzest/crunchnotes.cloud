@@ -1,6 +1,6 @@
 ---
 title: "Azure 800 Deployment Limit – Automate the Cleanup"
-date: 2026-02-16 20:00:00 +0100
+date: 2026-02-16 10:00:00 +0100
 categories: [Azure, Automation]
 tags: [azure, powershell, automation-account, deployments, resource-group]
 image:
