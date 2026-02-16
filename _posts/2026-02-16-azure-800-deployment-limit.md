@@ -16,6 +16,9 @@ Azure keeps a history of every ARM deployment in a Resource Group, and the hard 
 
 > *Creating the deployment would exceed the quota of '800'. The current deployment count is '800'.*
 
+![Azure 800 deployment quota error](/assets/img/posts/800-deployment-error.png)
+_The moment you know your Friday is ruined._
+
 I ran into this on a Resource Group with frequent deployments. You can delete old deployments manually through the portal or CLI, but that's a one-time fix. Next month you're back to square one. I needed something that runs quietly in the background and keeps the history under control – without me ever thinking about it again.
 
 ## The fix
