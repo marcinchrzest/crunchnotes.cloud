@@ -1,25 +1,41 @@
 ---
 layout: null
+sitemap: false
 ---
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+                            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+        xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Strona główna -->
   <url>
-    <loc>{{ site.url }}/</loc>
+    <loc>{{ site.url }}{% if site.baseurl != "" %}{{ site.baseurl }}{% endif %}/</loc>
     <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+
+  <!-- Strony z kolekcji tabs (Chirpy-specific) -->
   {% for page in site.tabs %}
     <url>
-      <loc>{{ site.url }}{{ page.url }}</loc>
-      <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+      <loc>{{ site.url }}{% if site.baseurl != "" %}{{ site.baseurl }}{% endif %}{{ page.url | remove: 'index.html' }}</loc>
+      {% if page.lastmod %}
+        <lastmod>{{ page.lastmod | date_to_xmlschema }}</lastmod>
+      {% elsif page.date %}
+        <lastmod>{{ page.date | date_to_xmlschema }}</lastmod>
+      {% else %}
+        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+      {% endif %}
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
     </url>
   {% endfor %}
+
+  <!-- Posty z _posts -->
   {% for post in site.posts %}
     <url>
-      <loc>{{ site.url }}{{ post.url }}</loc>
+      <loc>{{ site.url }}{% if site.baseurl != "" %}{{ site.baseurl }}{% endif %}{{ post.url | remove: 'index.html' }}</loc>
       {% if post.lastmod %}
         <lastmod>{{ post.lastmod | date_to_xmlschema }}</lastmod>
       {% else %}
@@ -29,4 +45,5 @@ layout: null
       <priority>0.7</priority>
     </url>
   {% endfor %}
+
 </urlset>
