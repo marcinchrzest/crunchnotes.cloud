@@ -45,7 +45,7 @@ So I cleaned them up:
 
 ```powershell
 Get-SmbConnection | Remove-SmbConnection -Force
-cmdkey /add:example.com /user:CORP\svc-dataops /pass
+cmdkey /add:example.com /user:EXAMPLE\svc-dataops /pass
 ```
 
 It helped. Sort of. Some paths started working, others didn't. The story had to be more complicated than auth.
@@ -141,7 +141,7 @@ Set-DnsClientGlobalSetting -SuffixSearchList @("example.com")
 Set-SmbClientConfiguration -RequireSecuritySignature $true -Confirm:$false
 
 # 3. Pre-stage credentials for the file server domain
-cmdkey /add:example.com /user:CORP\svc-account /pass:*
+cmdkey /add:example.com /user:EXAMPLE\svc-account /pass:*
 
 # 4. Verify
 Resolve-DnsName <known-target-shortname>
