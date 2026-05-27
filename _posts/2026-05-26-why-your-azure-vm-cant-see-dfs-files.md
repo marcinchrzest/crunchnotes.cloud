@@ -22,7 +22,7 @@ This is where you start guessing wrong.
 
 ## The misleading symptoms
 
-Here's what I chased first, in order. Skip ahead if you already know where this is going - the rest of you, enjoy the ride.
+Here's what I chased first, in order.
 
 ### Red herring #1: Error 1219 and mixed credentials
 
@@ -155,7 +155,7 @@ DFS error messages lie about the cause. "Cannot resolve path" sounds like DFS. I
 
 A path that resolves halfway is a signal that the second hop uses a different resolution mechanism than the first. In DFS, the difference is FQDN versus short name. Without a DNS suffix search list, short names die silently.
 
-Domain join silently installs a DNS suffix policy that most admins never think about - until they deploy a VM without it. Azure VMs outside the domain join template are the most common place this lands.
+Domain join silently installs a DNS suffix policy that most admins never think about - until they deploy a VM without it. Azure VMs outside the domain join template are the most common place this bites you.
 
 Always check DNS before Kerberos before permissions. Cheapest first, loudest last.
 
